@@ -1,10 +1,10 @@
 import * as esbuild from 'esbuild-wasm';
 import React, { useState, useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
 import { createRoot } from "react-dom/client"
 import { unpkgPathPlugin } from './plugins/unpkg-path-plugin'
 import { fetchPlugin } from './plugins/fetch-plugin';
-import { rootCertificates } from 'tls';
+import CodeEditor from './components/code-editor';
+
 
 
 const App = () => {
@@ -69,6 +69,7 @@ const App = () => {
 
   return (
     <div>
+      <CodeEditor />
       <textarea
         value={input}
         onChange={(e) => setInput(e.target.value)}
