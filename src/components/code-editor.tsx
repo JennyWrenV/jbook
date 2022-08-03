@@ -5,6 +5,11 @@ import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
 import prettier from 'prettier';
 import parser from 'prettier/parser-babel';
 
+import { parse } from "@babel/parser";
+import traverse from "@babel/traverse";
+// @ts-ignore
+import MonacoJSXHighlighter from 'monaco-jsx-highlighter';
+
 interface CodeEditorProps {
     initialValue: string;
     onChange(value: string): void;
@@ -22,6 +27,8 @@ const CodeEditor = ({ onChange, initialValue }: CodeEditorProps) => {
         editorRef.current = editor;
         editor.onDidChangeModelContent(() => onChange(editor.getValue()));
         editor.getModel()?.updateOptions({ tabSize: 2 });
+
+        
     };
 
     const onFormatClick = () => {
