@@ -35,9 +35,11 @@ const TextEditor: React.FC = () => {
 
     return (
         <div className="text-editor card" onClick={() => setEditing(true)}>
+            <div className="card-header"></div>
             <div className="card-content">
                 <MDEditor.Markdown source={value} />
-                </div>
+            </div>
+            <div className="card-header"></div>
         </div>
     )
 }
