@@ -24,7 +24,7 @@ export const createCellsRouter = (filename: string, dir: string) => {
         const isLocalApiError = (err: any): err is LocalApiError => {
             return typeof err.code === "string";
         };
-
+        console.log(fullPath)
         try {
             const result = await fs.readFile(fullPath, { encoding: 'utf-8' })
 

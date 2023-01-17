@@ -12,7 +12,6 @@ export const serve = (
     const app = express();
 
     app.use(createCellsRouter(filename, dir));
-
     if (useProxy) {
         app.use(
             createProxyMiddleware({
