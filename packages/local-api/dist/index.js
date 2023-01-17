@@ -15,7 +15,7 @@ const serve = (port, filename, dir, useProxy) => {
         app.use((0, http_proxy_middleware_1.createProxyMiddleware)({
             target: 'http://localhost:3000',
             ws: true,
-            logLevel: 'silent'
+            logLevel: 'silent',
         }));
     }
     else {

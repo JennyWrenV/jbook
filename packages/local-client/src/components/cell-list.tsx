@@ -9,19 +9,14 @@ import { useActions } from "../hooks/use-actions";
 
 const CellList: React.FC = () => {
 
-    const cells = useTypedSelector(({ cells }) => {
-        if (cells) {
-            const { order, data } = cells
-            return order.map((id) => data[id])
-        }
-        return undefined
-    });
+    const cells = useTypedSelector(({ cells: { order, data } }) =>
+    order.map((id) => data[id])
+  );
+  const { fetchCells } = useActions();
 
-    const { fetchCells } = useActions();
-
-    useEffect(() => {
-        fetchCells();
-    }, [])
+  useEffect(() => {
+    fetchCells();
+  }, []);
 
     const renderedCells = cells?.map((cell) => (
         <Fragment key={cell.id}>
