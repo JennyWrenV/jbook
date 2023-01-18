@@ -1,8 +1,11 @@
 {
   "name": "@jvcodebook/local-client",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
+  
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
     "@babel/parser": "^7.18.10",
     "@babel/traverse": "^7.18.10",
     "@fortawesome/fontawesome-free": "^6.1.2",
