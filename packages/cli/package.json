@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "commander": "^9.5.0",
-    "@jsnote/local-api": "^1.0.0"
+    "@jvcodebook/local-api": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",

@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { serve } from '@jvcodebook/local-api'
+import { serve } from "@jvcodebook/local-api";
 import path from 'path'
 
 
